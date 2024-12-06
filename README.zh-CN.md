@@ -16,7 +16,7 @@ The english readme please see [README.md](README.md)
 - composer 命令
 
 ```bash
-composer require swoft/validator
+composer require swoft-fork/validator
 ```
 
 ## 相关资源

@@ -16,7 +16,7 @@ Swoft Validator Component
 - composer command
 
 ```bash
-composer require swoft/validator
+composer require swoft-fork/validator
 ```
 
 ## Resources

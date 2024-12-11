@@ -21,9 +21,8 @@ use Swoft\Validator\ValidatorRegister;
  * Class AfterDateParser
  *
  * @since 2.0
- *
- * @AnnotationParser(annotation=AfterDate::class)
  */
+#[AnnotationParser(annotation: AfterDate::class)]
 class AfterDateParser extends Parser
 {
     /**

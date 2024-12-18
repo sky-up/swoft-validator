@@ -10,7 +10,6 @@
 
 namespace Swoft\Validator\Annotation\Mapping;
 
-use Attribute;
 use Doctrine\Common\Annotations\Annotation\Target;
 
 /**
@@ -21,7 +20,7 @@ use Doctrine\Common\Annotations\Annotation\Target;
  * @Annotation
  * @Target("PROPERTY")
  */
-#[Attribute(Attribute::TARGET_PROPERTY)]
+#[\Attribute(\Attribute::TARGET_PROPERTY)]
 class AfterDate
 {
     /**
@@ -37,22 +36,18 @@ class AfterDate
     /**
      * AfterDate constructor.
      *
-     * @param array|string $values
+     * @param array $values
      */
-    public function __construct($values = [])
+    public function __construct(array $values)
     {
-        if (is_string($values)) {
-            $this->message = $values;
-        } elseif (is_array($values)) {
-            if (isset($values['value'])) {
-                $this->message = $values['value'];
-            }
-            if (isset($values['message'])) {
-                $this->message = $values['message'];
-            }
-            if (isset($values['date'])) {
-                $this->date = $values['date'];
-            }
+        if (isset($values['value'])) {
+            $this->message = $values['value'];
+        }
+        if (isset($values['message'])) {
+            $this->message = $values['message'];
+        }
+        if (isset($values['date'])) {
+            $this->date = $values['date'];
         }
     }
 

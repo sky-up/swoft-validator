@@ -16,7 +16,6 @@ use Swoft\Annotation\Annotation\Parser\Parser;
 use Swoft\Validator\Annotation\Mapping\AfterDate;
 use Swoft\Validator\Exception\ValidatorException;
 use Swoft\Validator\ValidatorRegister;
-use Attribute;
 
 /**
  * Class AfterDateParser
@@ -25,6 +24,7 @@ use Attribute;
  *
  * @AnnotationParser(annotation=AfterDate::class)
  */
+#[\Attribute(\Attribute::TARGET_CLASS)]
 #[AnnotationParser(annotation: AfterDate::class)]
 class AfterDateParser extends Parser
 {
